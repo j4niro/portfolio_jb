@@ -1,0 +1,32 @@
+<section id="experience" class="section">
+  <div appReveal>
+    <span class="section-tag">Expérience</span>
+    <h2 class="section-title">Expériences professionnelles</h2>
+    <p class="section-subtitle"></p>
+  </div>
+
+  <div class="exp-list">
+    <article class="exp-card card" *ngFor="let exp of experiences; let i = index" appReveal [revealDelay]="i * 100">
+      <header class="exp-head">
+        <div>
+          <h3 class="exp-role">{{ exp.role }}</h3>
+          <p class="exp-company">{{ exp.company }} <span class="exp-type">· {{ exp.type }}</span></p>
+        </div>
+        <div class="exp-period">
+          <span>{{ exp.period }}</span>
+          <span class="exp-location">{{ exp.location }}</span>
+        </div>
+      </header>
+
+      <div class="exp-body">
+        <p><strong>Contexte :</strong> {{ exp.context }}</p>
+        <p><strong>Action :</strong> {{ exp.action }}</p>
+        <p><strong>Résultat :</strong> {{ exp.result }}</p>
+      </div>
+
+      <div class="exp-tech">
+        <span class="badge" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.ach-card {
+  padding: 28px;
+}
+
+.ach-trophy {
+  font-size: 1.6rem;
+}
+
+h3 {
+  margin-top: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.ach-event {
+  margin-top: 8px;
+  color: var(--accent-soft);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.ach-period {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ach-desc {
+  margin-top: 14px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.ach-result {
+  margin-top: 14px;
+  font-size: 0.83rem;
+  color: var(--accent-teal);
+  font-weight: 600;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}

@@ -1,0 +1,19 @@
+<section id="skills" class="section">
+  <div appReveal>
+    <span class="section-tag">Compétences</span>
+    <h2 class="section-title">Boîte à outils technique</h2>
+    <p class="section-subtitle">Un socle fullstack complet, du front au back, en passant par la donnée et les outils DevOps.</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card card" *ngFor="let cat of skillCategories; let i = index" appReveal [revealDelay]="(i % 4) * 80">
+      <div class="skill-head">
+        <span class="skill-icon">{{ cat.icon }}</span>
+        <h3>{{ cat.category }}</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="badge" *ngFor="let skill of cat.skills">{{ skill }}</span>
+      </div>
+    </div>
+  </div>
+</section>

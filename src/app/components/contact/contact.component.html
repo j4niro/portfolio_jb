@@ -1,0 +1,75 @@
+<section id="contact" class="section">
+  <div appReveal>
+    <span class="section-tag">Contact</span>
+    <h2 class="section-title">Discutons de votre prochaine alternance</h2>
+    <p class="section-subtitle">
+      Disponible pour une alternance Développeur Fullstack de 12 mois à partir de septembre 2026.
+      N'hésitez pas à me contacter.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info" appReveal [revealDelay]="100">
+      <div class="info-item">
+        <span class="info-icon"><i class="fa-solid fa-envelope"></i></span>
+        <div>
+          <p class="info-label">Email</p>
+          <a [href]="profile.socials.email">{{ profile.email }}</a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon"><i class="fa-solid fa-phone"></i></span>
+        <div>
+          <p class="info-label">Téléphone</p>
+          <p>{{ profile.phone }}</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+        <div>
+          <p class="info-label">Localisation</p>
+          <p>{{ profile.location }}</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon"><i class="fa-solid fa-link"></i></span>
+        <div>
+          <p class="info-label">Réseaux</p>
+          <div class="info-links">
+            <a *ngIf="profile.socials.github" [href]="profile.socials.github" target="_blank">GitHub</a>
+            <a *ngIf="profile.socials.linkedin" [href]="profile.socials.linkedin" target="_blank">LinkedIn</a>
+            <span *ngIf="!profile.socials.github && !profile.socials.linkedin" class="placeholder">— à compléter —</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-primary cv-btn" href="/assets/cv/{{ profile.cvFile }}" download><i class="fa-solid fa-download"></i> Télécharger mon CV</a>
+    </div>
+
+    <form class="contact-form card" [formGroup]="form" (ngSubmit)="onSubmit()" appReveal [revealDelay]="200">
+      <label>
+        Nom
+        <input type="text" formControlName="name" placeholder="Votre nom" />
+        <span class="error" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">Champ requis</span>
+      </label>
+
+      <label>
+        Email
+        <input type="email" formControlName="email" placeholder="vous@exemple.com" />
+        <span class="error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">Email invalide</span>
+      </label>
+
+      <label>
+        Message
+        <textarea rows="5" formControlName="message" placeholder="Votre message..."></textarea>
+        <span class="error" *ngIf="form.get('message')?.invalid && form.get('message')?.touched">Champ requis</span>
+      </label>
+
+      <button type="submit" class="btn btn-primary">Envoyer le message</button>
+      <p class="form-note" *ngIf="submitted">Votre client mail va s'ouvrir pour finaliser l'envoi. Merci !</p>
+    </form>
+  </div>
+</section>

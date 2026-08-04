@@ -1,0 +1,13 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-follow"> Suivez-moi !</span>
+
+    <div class="footer-socials">
+      <a *ngIf="profile.socials.github" [href]="profile.socials.github" target="_blank" rel="noopener">GitHub</a>
+      <a *ngIf="profile.socials.linkedin" [href]="profile.socials.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a [href]="profile.socials.email">Email</a>
+    </div>
+  </div>
+
+  <p class="footer-copy">{{ profile.displayName }} © {{ year }}</p>
+</footer>

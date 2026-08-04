@@ -1,0 +1,20 @@
+<section id="about" class="section about">
+  <div appReveal>
+    <span class="section-tag">À propos</span>
+    <h2 class="section-title">Qui je suis</h2>
+  </div>
+
+  <div class="about-grid">
+    <p class="about-text" appReveal [revealDelay]="100">{{ profile.about }}</p>
+
+    <div class="about-highlights" appReveal [revealDelay]="200">
+      <div class="highlight-item" *ngFor="let item of highlights">
+        <i class="highlight-icon" [class]="item.icon" aria-hidden="true"></i>
+        <div>
+          <p class="highlight-label">{{ item.label }}</p>
+          <p class="highlight-value">{{ item.value }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

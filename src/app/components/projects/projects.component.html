@@ -1,0 +1,33 @@
+<section id="projects" class="section">
+  <div appReveal>
+    <span class="section-tag">Projets</span>
+    <h2 class="section-title">Projets & réalisations</h2>
+    <p class="section-subtitle">Projets professionnels et académiques, du prototype web aux applications de production.</p>
+  </div>
+
+  <div class="projects-grid">
+    <article class="project-card card" *ngFor="let project of projects; let i = index" appReveal [revealDelay]="(i % 3) * 90">
+      <div class="project-thumb">
+        <span>{{ project.category.charAt(0) }}</span>
+      </div>
+
+      <div class="project-body">
+        <span class="project-category">{{ project.category }}</span>
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-context">{{ project.context }} <span *ngIf="project.period">· {{ project.period }}</span></p>
+        <p class="project-desc">{{ project.description }}</p>
+
+        <div class="project-tech">
+          <span class="badge" *ngFor="let tech of project.technologies">{{ tech }}</span>
+        </div>
+
+        <div class="project-links">
+          <a class="btn btn-ghost" *ngIf="project.githubUrl; else noGithub" [href]="project.githubUrl" target="_blank" rel="noopener">GitHub</a>
+          <ng-template #noGithub><span class="link-placeholder">Code privé / non public</span></ng-template>
+
+          <a class="btn btn-ghost" *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" rel="noopener">Live Demo</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

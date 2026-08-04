@@ -1,0 +1,18 @@
+<section id="achievements" class="section">
+  <div appReveal>
+    <span class="section-tag">Distinctions</span>
+    <h2 class="section-title">Achievements & Hackathons</h2>
+    <p class="section-subtitle">Compétitions, engagements associatifs et distinctions obtenues au fil de mon parcours.</p>
+  </div>
+
+  <div class="ach-grid">
+    <div class="ach-card card" *ngFor="let ach of achievements; let i = index" appReveal [revealDelay]="(i % 3) * 90">
+      <span class="ach-trophy">🏆</span>
+      <h3>{{ ach.title }}</h3>
+      <p class="ach-event">{{ ach.event }}</p>
+      <p class="ach-period" *ngIf="ach.period">{{ ach.period }}</p>
+      <p class="ach-desc">{{ ach.description }}</p>
+      <p class="ach-result">{{ ach.result }}</p>
+    </div>
+  </div>
+</section>

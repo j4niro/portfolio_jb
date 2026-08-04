@@ -1,0 +1,127 @@
+.nav-wrap {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: rgba(15, 15, 18, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 14px 12px 22px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  max-width: 100%;
+}
+
+.scrolled .nav-pill {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.nav-brand {
+  font-weight: 700;
+  color: var(--accent-soft);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+
+  a {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.nav-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: var(--accent-soft);
+
+  a {
+    display: flex;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  padding: 6px;
+
+  span {
+    width: 20px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 62px;
+  left: 20px;
+  right: 20px;
+  background: rgba(15, 15, 18, 0.97);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  backdrop-filter: blur(16px);
+
+  a {
+    padding: 12px 14px;
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  a:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+  }
+}

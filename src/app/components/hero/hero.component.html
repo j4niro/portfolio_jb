@@ -1,0 +1,53 @@
+<section id="hero" class="hero">
+  <div class="hero-glow"></div>
+
+  <div class="hero-inner">
+    <div class="hero-text" appReveal>
+      <p class="hero-eyebrow">Bonjour, je suis</p>
+      <h1 class="hero-name">{{ profile.firstName }} <span>{{ profile.lastName }}</span></h1>
+      <h2 class="hero-title">{{ profile.title }}</h2>
+
+      <p class="hero-summary">{{ profile.summary }}</p>
+
+      <div class="hero-meta">
+        <span><i class="fa-solid fa-location-dot"></i> {{ profile.location }}</span>
+        <span><i class="fa-solid fa-envelope"></i> {{ profile.email }}</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/assets/cv/{{ profile.cvFile }}" download><i class="fa-solid fa-download"></i> Télécharger le CV</a>
+        <a class="btn btn-ghost" href="#experience">Voir mon parcours</a>
+      </div>
+
+      <div class="hero-socials">
+        <a *ngIf="profile.socials.github" [href]="profile.socials.github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a *ngIf="profile.socials.linkedin" [href]="profile.socials.linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a [href]="profile.socials.email"><i class="fa-solid fa-envelope"></i> Email</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" appReveal [revealDelay]="150">
+      <div class="avatar-frame">
+        <ng-container *ngIf="!profile.photo">
+          <div class="avatar-placeholder initials">
+            <span>{{ profile.firstName.charAt(0) }}{{ profile.lastName.charAt(0) }}</span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="profile.photo">
+          <div class="avatar-placeholder photo">
+            <img [src]="profile.photo" [alt]="profile.displayName || (profile.firstName + ' ' + profile.lastName)">
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="floating-card card-1">
+        <span class="dot"></span> Recherche alternance - Sept. 2026
+      </div>
+      <div class="floating-card card-2">
+        Fullstack · Data · IA · Freelance
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-banner">{{ profile.tagline }}</div>
+</section>

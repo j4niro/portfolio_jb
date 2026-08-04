@@ -1,0 +1,45 @@
+<section id="project-videos" class="section">
+  <div appReveal>
+    <span class="section-tag">Démonstrations</span>
+    <h2 class="section-title">Project Videos</h2>
+    <p class="section-subtitle">
+      Démonstrations vidéo de mes projets clés. Les emplacements ci-dessous sont prêts à recevoir
+      les enregistrements — il suffit d'ajouter le lien vidéo dans les données du site.
+    </p>
+  </div>
+
+  <div class="videos-grid">
+    <article class="video-card card" *ngFor="let video of videos; let i = index" appReveal [revealDelay]="(i % 3) * 90">
+      <button class="video-thumb" (click)="open(video)" [class.disabled]="!video.videoUrl">
+        <span class="thumb-label">{{ video.thumbnailPlaceholder }}</span>
+        <span class="play-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+        <span class="thumb-hint" *ngIf="!video.videoUrl">Vidéo à venir</span>
+      </button>
+
+      <div class="video-body">
+        <h3>{{ video.title }}</h3>
+        <p>{{ video.description }}</p>
+        <div class="video-tech">
+          <span class="badge" *ngFor="let tech of video.technologies">{{ tech }}</span>
+        </div>
+        <a class="video-link" *ngIf="video.projectLink" [href]="video.projectLink">Voir le projet →</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="video-modal" *ngIf="activeVideo" (click)="close()">
+    <div class="video-modal-inner" (click)="$event.stopPropagation()">
+      <button class="video-modal-close" (click)="close()">✕</button>
+      <iframe
+        *ngIf="activeVideo.videoUrl"
+        [src]="activeVideo.videoUrl | safeUrl"
+        title="Project video"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section id="certifications" class="section">
+  <div appReveal>
+    <span class="section-tag">Certifications</span>
+    <h2 class="section-title">Certifications & formations complémentaires</h2>
+    <p class="section-subtitle">Une montée en compétence continue via IBM, Meta et ICDL, sur Coursera.</p>
+  </div>
+
+  <div class="cert-grid">
+    <div class="cert-card card" *ngFor="let cert of certifications; let i = index" appReveal [revealDelay]="(i % 3) * 80">
+      <div class="cert-badge">{{ cert.issuer }}</div>
+      <h3 class="cert-title">{{ cert.title }}</h3>
+      <p class="cert-domain">{{ cert.domain }}</p>
+
+      <div class="cert-skills">
+        <span class="badge" *ngFor="let skill of cert.skills">{{ skill }}</span>
+      </div>
+
+      <p class="cert-result">{{ cert.result }}</p>
+    </div>
+  </div>
+</section>

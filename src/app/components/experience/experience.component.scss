@@ -1,0 +1,75 @@
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.exp-card {
+  padding: 32px;
+}
+
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.exp-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.exp-company {
+  margin-top: 6px;
+  color: var(--accent-soft);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.exp-type {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.exp-period {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--accent-teal);
+  font-weight: 600;
+  text-align: right;
+}
+
+.exp-location {
+  color: var(--text-muted);
+  font-weight: 400;
+  max-width: 260px;
+}
+
+.exp-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+
+  strong {
+    color: var(--text-primary);
+  }
+}
+
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
