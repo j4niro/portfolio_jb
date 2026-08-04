@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio — Junior Bini
 
 Portfolio Angular (standalone components, Angular 17) pour Roland Junior Désiré BINI,
@@ -64,3 +65,6 @@ déjà relié aux boutons "Télécharger le CV" du hero et de la section contact
 - Animations "reveal on scroll" via une directive `IntersectionObserver` maison,
   pas de dépendance externe.
 - Aucune information n'a été inventée : tout le contenu vient strictement du CV fourni.
+=======
+# portfolio_jb
+>>>>>>> de3a1dd3ffbb28910eca59e377242d1df8a033f3
