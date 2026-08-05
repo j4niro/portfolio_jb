@@ -25,4 +25,8 @@ export class ProjectVideosComponent {
   close(): void {
     this.activeVideo = null;
   }
+
+  isLocalVideo(url?: string): boolean {
+    return !!url && !url.startsWith('http://') && !url.startsWith('https://') && !url.startsWith('www.');
+  }
 }

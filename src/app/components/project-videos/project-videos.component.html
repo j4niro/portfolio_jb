@@ -3,8 +3,7 @@
     <span class="section-tag">Démonstrations</span>
     <h2 class="section-title">Project Videos</h2>
     <p class="section-subtitle">
-      Démonstrations vidéo de mes projets clés. Les emplacements ci-dessous sont prêts à recevoir
-      les enregistrements — il suffit d'ajouter le lien vidéo dans les données du site.
+      Démonstrations vidéo de mes projets clés.
     </p>
   </div>
 
@@ -32,8 +31,19 @@
   <div class="video-modal" *ngIf="activeVideo" (click)="close()">
     <div class="video-modal-inner" (click)="$event.stopPropagation()">
       <button class="video-modal-close" (click)="close()">✕</button>
+
+      <video
+        *ngIf="activeVideo.videoUrl && isLocalVideo(activeVideo.videoUrl)"
+        controls
+        preload="metadata"
+        autoplay
+        class="video-player">
+        <source [src]="activeVideo.videoUrl" type="video/mp4">
+        Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+      </video>
+
       <iframe
-        *ngIf="activeVideo.videoUrl"
+        *ngIf="activeVideo.videoUrl && !isLocalVideo(activeVideo.videoUrl)"
         [src]="activeVideo.videoUrl | safeUrl"
         title="Project video"
         frameborder="0"

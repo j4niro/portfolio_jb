@@ -99,26 +99,31 @@
 .video-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 300;
-  padding: 30px;
+  padding: 20px;
 }
 
 .video-modal-inner {
   position: relative;
-  width: min(900px, 100%);
+  width: min(1200px, 100%);
+  max-height: min(85vh, 900px);
   aspect-ratio: 16 / 9;
   background: #000;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 
-  iframe {
+  iframe,
+  .video-player {
     width: 100%;
     height: 100%;
     border: 0;
+    display: block;
+    background: #000;
   }
 }
 
@@ -126,11 +131,13 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   z-index: 2;
+  cursor: pointer;
+  font-size: 1rem;
 }

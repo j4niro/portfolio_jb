@@ -256,35 +256,35 @@ export const PROJECT_VIDEOS: ProjectVideo[] = [
     description: 'Démonstration du tableau de bord temps réel (latence, throughput, taux d\'erreur) — Bridge Bank Group.',
     technologies: ['Angular', 'FastAPI'],
     thumbnailPlaceholder: 'BBG',
-    videoUrl: 'src\\assets\\videos\\vid_apitester.mp4'
+    videoUrl: '/assets/videos/vid_apitester.mp4'
   },
   {
     title: 'Application de visualisation des anomalies de températures',
     description: 'Démonstration de l\'application de visualisation des anomalies de température à la surface du globe entre 1880 et 2025.',
     technologies: ['ReactJS', 'TypeScript', 'Redux'],
     thumbnailPlaceholder: 'BigEyes',
-    videoUrl: 'https://drive.google.com/file/d/1H8vRZO2VonMAK4ZGah15IfbEhVeiUAoo/view?usp=sharing'
+    videoUrl: '/assets/videos/bigeyes_demo.mp4'
   },
   {
     title: 'Logiciel d\'analyse vidéo sous-marine - KOSMOS',
     description: 'Aperçu du logiciel d\'analyse de vidéos océanographiques développé pour l\'IFREMER.',
     technologies: ['Python', 'Qt'],
     thumbnailPlaceholder: 'KOSMOS',
-    videoUrl: ''
+    videoUrl: '/assets/videos/kosmos_demo.mp4'
   },
   {
     title: 'Application de suivi de consommation énergétique',
     description: 'Démonstration de l\'application de suivi temps réel développée chez Orange Digital Academy.',
     technologies: ['React JS', 'Flutter'],
     thumbnailPlaceholder: 'ODA',
-    videoUrl: 'https://drive.google.com/file/d/1tbOS2Y3ay0cCQLo7wWFXq30id2jGfhQ0/view?usp=sharing'
+    videoUrl: '/assets/videos/simulationKania.mp4'
   },
   {
     title: 'Sign to Speech',
     description: 'Démonstration du modèle de reconnaissance de la langue des signes ivoirienne et de sa traduction en langues locales.',
     technologies: ['Machine Learning', 'React JS'],
     thumbnailPlaceholder: 'S2S',
-    videoUrl: 'https://drive.google.com/file/d/1J3bbEzclzcfJKgqrylqAhUIWqHRP2-_g/view?usp=drive_link'
+    videoUrl: ''
   }
 ];
 
