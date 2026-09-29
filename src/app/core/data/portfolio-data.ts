@@ -23,7 +23,7 @@ export const  PROFILE = {
     'Élève ingénieur à IMT Atlantique en spécialité Mathematical & Computational Engineering, avec un solide background en développement logiciel et des compétences en data science, traitement et analyse de données et machine learning. Fort de plusieurs projets en développement fullstack (Angular, React, FastAPI, Node.js) et d\'une solide base en programmation, je souhaite aujourd\'hui m\'orienter vers la Data Science. Je recherche une alternance qui me permettra d\'approfondir mes compétences en modélisation, IA appliquée et valorisation des données au sein d\'une équipe innovante.',
   about:
     'Élève ingénieur à IMT Atlantique en spécialité Mathematical & Computational Engineering, en double diplôme avec l\'ESATIC, je mets à profit un solide socle en développement logiciel pour me spécialiser en Data Science, Machine Learning et Intelligence Artificielle. Mes expériences chez Orange Digital Academy, Bridge Bank Group et IFREMER m\'ont permis de concevoir des applications, développer des API et exploiter des données sur des projets concrets. Aujourd\'hui, je souhaite mettre mes compétences en mathématiques appliquées, analyse de données et IA au service de projets innovants, capables de transformer les données en solutions à fort impact.',
-  cvFile: 'cv_sfe_ds(1).pdf',
+  cvFile: 'cv_sfe_ds (1).pdf',
   socials: {
     github: 'https://github.com/j4niro',
     linkedin: 'https://www.linkedin.com/in/junior-bini-9463372a2/',
